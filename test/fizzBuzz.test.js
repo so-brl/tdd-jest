@@ -14,6 +14,8 @@ test('Fizz', () => {
         //expect(fizzBuzz(number).toBe('Fizz'));
     }
 
+
+
 });
 // test('Buzz', () => {
 //     expect(() => fizzBuzz()).toThrow('Buzz');

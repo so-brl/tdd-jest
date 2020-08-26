@@ -3,16 +3,13 @@
 const sum = require('../src/sum');
 
 
-
 test('Adds 1 + 2 to equal 3', () => {
     expect(sum(1, 2)).toBe(3);
 });
 
-
 test('Parameters is not number', () => {
-        expect(() => sum("a", 2)).toThrow(/number/);
+    expect(() => sum("a", 2)).toThrow(/number/);
 });
-
 
 
 

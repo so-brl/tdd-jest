@@ -1,22 +1,73 @@
 /**
- * Convert number to  Roman numerals
- * @param number
+ * Convert Arabe numerals to  Roman numerals
+ * @param romanNumber
  * @returns {string}
  */
-function romanConvertNumber(number) {
-    if (isNaN(number))
+function arabeToRoman(arabeNumber) {
+    if (isNaN(arabeNumber)) {
         throw ('Parameter must be a number');
+    }
+
     var romanData = {M: 1000, CM: 900, D: 500, CD: 400, C: 100, XC: 90, L: 50, XL: 40, X: 10, IX: 9, V: 5, IV: 4, I: 1},
         roman = '', i;
     for (i in romanData) {
-        while (number >= romanData[i]) {
+        //console.log(arabeNumber);
+        while (arabeNumber >= romanData[i]) {
             roman += i;
-            number -= romanData[i];
+            arabeNumber -= romanData[i];
+            //console.log(arabeNumber);
         }
     }
     return roman;
 }
 
-console.log(romanConvertNumber(156));
+/**
+ * Convert Roman numerals  to  Arabe numerals
+ * @param arabeNumber
+ * @returns {string}
+ */
 
-module.exports = romanConvertNumber;
+function romanToArabe(romanNumber) {
+    if (typeof romanNumber!= 'string') {
+        throw ('Parameter must be a string');
+    }
+    romanNumber = romanNumber.toUpperCase();
+    var romanDatas = {
+        M: 1000,
+        CM: 900,
+        D: 500,
+        CD: 400,
+        C: 100,
+        XC: 90,
+        L: 50,
+        XL: 40,
+        X: 10,
+        IX: 9,
+        V: 5,
+        IV: 4,
+        I: 1
+    };
+    var romanNumberArray = romanNumber.split('');
+    var length = romanNumberArray.length;
+    var newArrayToCalcul = [];
+    for (var i = 0; i <= length; i++) {
+        if (romanDatas[romanNumberArray[i] + romanNumberArray[i + 1]]) {
+            newArrayToCalcul.push(romanDatas[romanNumberArray[i] + romanNumberArray[i + 1]]);
+            length = length -1;
+            i++;
+        } else {
+            newArrayToCalcul.push(romanDatas[romanNumberArray[i]]);
+        }
+    }
+    var total = 0;
+    for (var i = 0; i < newArrayToCalcul.length; i++) {
+        total += newArrayToCalcul[i] << 0;
+    }
+    return total;
+}
+
+
+console.log(arabeToRoman(2459));
+console.log(romanToArabe('MMCDLIX'));
+
+module.exports = {arabeToRoman, romanToArabe};

@@ -5,8 +5,11 @@ var number = 0;
 var arrayResultFizzBuzz;
 
 
-
-
+/**
+ * Create an Array of the FizzBuzz Kata
+ * @param totalRun
+ * @param number
+ */
 function fizzBuzz(totalRun, number) {
     var result = [];
     for (number ; number <= totalRun ; number++) {
@@ -29,6 +32,11 @@ function fizzBuzz(totalRun, number) {
     arrayResultFizzBuzz = result;
 }
 
+/**
+ * To see witch result is for the number
+ * @param index
+ * @returns {*}
+ */
 function fizzBuzzResult(index){
     return arrayResultFizzBuzz[index];
 }

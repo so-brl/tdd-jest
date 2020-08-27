@@ -1,41 +1,42 @@
 var eleveNumber = 33;
 var runNumber = 3;
-var totalRun = eleveNumber*runNumber;
+var totalRun = eleveNumber * runNumber;
 var number = 0;
-
-// function fizzBuzz() {
-//     for (var i = 0; i <= totalRun; i++) {
-// return number++;
-//     }
-// }
-
-//fizzBuzz();
+var arrayResultFizzBuzz;
 
 
-function fizzBuzz(){
-    //for( var i = 0 ; i <= totalRun ; i++ ){
-        if ( number % 3 === 0  && number % 5 !== 0 ){
-            //return ('Fizz');
 
-            throw ('Fizz');
+
+function fizzBuzz(totalRun, number) {
+    var result = [];
+    for (number ; number <= totalRun ; number++) {
+        if (number % 3 === 0 && number % 5 !== 0) {
+            console.log('Fizz');
+            result.push("Fizz");
         }
-        if ( number % 5 === 0 && number % 3 !== 0 ){
-            //console.log('Buzz');
-            //return ('Buzz');
-            throw ('Buzz');
+        else if (number % 5 === 0 && number % 3 !== 0) {
+            console.log('Buzz');
+            result.push("Buzz");
         }
-        if (number % 3 === 0 && number % 5 === 0){
-            //console.log('FizzBuz');
-            //return ('FizzBuzz');
-            throw ('FizzBuzz');
+       else if (number % 3 === 0 && number % 5 === 0) {
+            console.log('FizzBuzz');
+            result.push("FizzBuzz");
+        } else {
+            console.log(number);
+            result.push(number);
         }
-         else {
-        //console.log(number);
-            //return number;
-            throw (number);
-        }
-        //number++;
-    //}
+    }
+    arrayResultFizzBuzz = result;
 }
 
-module.exports =  fizzBuzz;
+function fizzBuzzResult(index){
+    return arrayResultFizzBuzz[index];
+}
+
+
+fizzBuzz(totalRun, number);
+console.log('*****************************');
+console.log(fizzBuzzResult(3));
+
+
+module.exports = fizzBuzzResult;

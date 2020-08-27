@@ -14,18 +14,18 @@ function fizzBuzz(totalRun, number) {
     var result = [];
     for (number ; number <= totalRun ; number++) {
         if (number % 3 === 0 && number % 5 !== 0 || number.toString().includes(3)) {
-            console.log('Fizz');
+            //console.log('Fizz');
             result.push("Fizz");
         }
         else if (number % 5 === 0 && number % 3 !== 0 || number.toString().includes(5)) {
-            console.log('Buzz');
+            //console.log('Buzz');
             result.push("Buzz");
         }
        else if (number % 3 === 0 && number % 5 === 0) {
-            console.log('FizzBuzz');
+            //console.log('FizzBuzz');
             result.push("FizzBuzz");
         } else {
-            console.log(number);
+            //console.log(number);
             result.push(number);
         }
     }
@@ -43,8 +43,8 @@ function fizzBuzzResult(index){
 
 
 fizzBuzz(totalRun, number);
-console.log('*****************************');
-console.log(fizzBuzzResult(3));
+//console.log('*****************************');
+//console.log(fizzBuzzResult(3));
 
 
 module.exports = fizzBuzzResult;

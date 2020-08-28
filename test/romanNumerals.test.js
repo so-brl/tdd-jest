@@ -20,17 +20,17 @@ describe(' Number to Roman numerals', () => {
 });
 
 describe(' Roman numerals to Number  ', () =>{
-    // test('I --> 1', () => {
-    //     expect(toolsConvertNumber.romanToArabe('i')).toEqual(1);
-    // });
-    //
-    // test('X --> 10', () => {
-    //     expect(toolsConvertNumber.romanToArabe('x')).toEqual(10);
-    // });
-    //
-    // test('VII --> 7', () => {
-    //     expect(toolsConvertNumber.romanToArabe('VII')).toEqual(7);
-    // });
+    test('I --> 1', () => {
+        expect(toolsConvertNumber.romanToArabe('i')).toEqual(1);
+    });
+
+    test('X --> 10', () => {
+        expect(toolsConvertNumber.romanToArabe('x')).toEqual(10);
+    });
+
+    test('VII --> 7', () => {
+        expect(toolsConvertNumber.romanToArabe('VII')).toEqual(7);
+    });
 
     test('Parameter is ok ', () => {
         expect(() => toolsConvertNumber.romanToArabe(1)).toThrow(/string/);

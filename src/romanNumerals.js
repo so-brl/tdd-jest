@@ -7,15 +7,12 @@ function arabeToRoman(arabeNumber) {
     if (isNaN(arabeNumber)) {
         throw ('Parameter must be a number');
     }
-
     var romanData = {M: 1000, CM: 900, D: 500, CD: 400, C: 100, XC: 90, L: 50, XL: 40, X: 10, IX: 9, V: 5, IV: 4, I: 1},
         roman = '', i;
     for (i in romanData) {
-        //console.log(arabeNumber);
         while (arabeNumber >= romanData[i]) {
             roman += i;
             arabeNumber -= romanData[i];
-            //console.log(arabeNumber);
         }
     }
     return roman;
@@ -71,3 +68,5 @@ console.log(arabeToRoman(2459));
 console.log(romanToArabe('MMCDLIX'));
 
 module.exports = {arabeToRoman, romanToArabe};
+
+

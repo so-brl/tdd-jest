@@ -2,9 +2,7 @@
 // https://jestjs.io/docs/en/configuration.html
 
 module.exports = {
-    globalSetup: './setup.js',
-    globalTeardown: './teardown.js',
-    testEnvironment: './puppeteer_environment.js',
+
   //"preset": "jest-puppeteer",
 
   // All imported modules in your tests should be mocked automatically
@@ -96,7 +94,7 @@ module.exports = {
   // notifyMode: "failure-change",
 
   // A preset that is used as a base for Jest's configuration
-   preset: "jest-puppeteer",
+   //preset: "jest-puppeteer",
 
   // Run tests from one or more projects
   // projects: null,

@@ -4,4 +4,4 @@
 /node_modules
 /.idea
 
-/modul-test-puppeteer *
+/modul-test-puppeteer/modul-test-puppeteer/node_modules

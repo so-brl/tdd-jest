@@ -64,8 +64,10 @@ function romanToArabe(romanNumber) {
 }
 
 
-console.log(arabeToRoman(2459));
-console.log(romanToArabe('MMCDLIX'));
+arabeToRoman(2459);
+romanToArabe('MMCDLIX');
+//console.log(arabeToRoman(2459));
+//console.log(romanToArabe('MMCDLIX'));
 
 module.exports = {arabeToRoman, romanToArabe};
 
